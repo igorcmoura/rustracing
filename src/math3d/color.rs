@@ -1,8 +1,8 @@
 use std::io;
 
-use crate::math3d::vec3;
+use crate::math3d::Vector3;
 
-pub type Color = vec3::Vector3;
+pub type Color = Vector3;
 
 pub fn write_color(mut out: impl io::Write, pixel_color: &Color) {
     let r = pixel_color.x();

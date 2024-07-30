@@ -17,13 +17,16 @@ impl Vector3 {
         Self { e: [0.0, 0.0, 0.0] }
     }
 
-    pub const fn x(&self) -> f64 {
+    #[inline]
+    pub fn x(&self) -> f64 {
         self.e[0]
     }
-    pub const fn y(&self) -> f64 {
+    #[inline]
+    pub fn y(&self) -> f64 {
         self.e[1]
     }
-    pub const fn z(&self) -> f64 {
+    #[inline]
+    pub fn z(&self) -> f64 {
         self.e[2]
     }
 
