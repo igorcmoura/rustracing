@@ -41,16 +41,16 @@ impl Vector3 {
     }
 
     #[inline]
-    pub fn dot(&self, other: &Self) -> f64 {
-        self[0] * other[0] + self[1] * other[1] + self[2] * other[2]
+    pub fn dot(u: &Self, v: &Self) -> f64 {
+        u[0] * v[0] + u[1] * v[1] + u[2] * v[2]
     }
 
     #[inline]
-    pub fn cross(&self, other: &Self) -> Self {
+    pub fn cross(u: &Self, v: &Self) -> Self {
         Self::new(
-            self[1] * other[2] - self[2] * other[1],
-            self[2] * other[0] - self[0] * other[2],
-            self[0] * other[1] - self[1] * other[0],
+            u[1] * v[2] - u[2] * v[1],
+            u[2] * v[0] - u[0] * v[2],
+            u[0] * v[1] - u[1] * v[0],
         )
     }
 
